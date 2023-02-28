@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text menalka</title>
+</head>
+<body>
+    <div class="main-vw__text">
+        <div class="static-text">
+            The
+        </div>
+        <ul class="dynamic-text">
+            <li><span style="--stps: 7;">Bloger</span></li>
+            <li><span style="--stps: 11;">Programmer</span></li>
+            <li><span style="--stps: 10;">Developer</span></li>
+            <li><span style="--stps: 8;">Student</span></li>
+        </ul>
+
+    </div>
+
+
+
+
+    <div class="cursor"></div>
+
+<script>
+    var cursor = document.querySelector(".cursor")
+    document.addEventListener("mousemove",function(c) {
+        cursor.style.cssText = "left: " + c.clientX + "px; top: " + c.clientY + "px;"; 
+    });
+</script>
+</body>
+</html>

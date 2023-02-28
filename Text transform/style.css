@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to top right, pink, cornflowerblue); */
+    background: cornflowerblue;
+    user-select: none;
+    cursor: none;
+}
+
+.main-vw__text {
+    display: flex;
+    position: absolute;
+}
+
+
+.main-vw__text .static-text {
+    font-family: 'Great Vibes', cursive;
+    color: #fff;
+    font-size: 80px;
+}
+
+.main-vw__text .dynamic-text {
+    font-family: 'Consolas', sans-serif;
+    margin-left: 1.3em;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.main-vw__text .dynamic-text li {
+    list-style: none;
+    color: #ccc;
+    font-size: 60px;
+    font-weight: 700;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.main-vw__text .dynamic-text li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 80px;
+}
+
+.main-vw__text .dynamic-text li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: cornflowerblue;
+    border-left: 3px solid #ccc;
+    animation: typing 3s steps(var(--stps)) infinite;
+}
+
+@keyframes typing {
+    /* 0%, 50%, 100% {
+        border-left: none;
+    }
+    25%, 75% {
+        border-left: 3px solid #ccc;
+    } */
+    40%, 60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
+}
+/* ______________________________________________ */
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f0000020;
+    filter: drop-shadow(0 0 3px #f0000020)
+    drop-shadow(0 0 5px #f00000)
+    drop-shadow(0 0 7px #f00000)
+    drop-shadow(0 0 11px #f00000);
+    border: 1px solid #f00000;
+    animation: cursorshadow 2s linear infinite;
+    position: fixed;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    transition: .05s;
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+}
+
+.cursor::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #750707;
+    border-radius: 50%;
+    transition: .1s;
+}
