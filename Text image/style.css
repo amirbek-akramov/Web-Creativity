@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section {
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+.pp {
+    position: relative;
+    width: 50%;
+    right: -50%;
+    font-size: 0.5em;
+    letter-spacing: -0.05em;
+    line-height: 0.7em;
+    background: url(./images/Amirbek_snowvy.jpg), url(./images/Amirbek_snowvy.jpg), #000;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 520px;
+    /* background-blend-mode: color-dodge; */
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.pp::before {
+    content: '';
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    background: url(./images/Amirbek_snowvy.jpg);
+    background-repeat: no-repeat;
+    background-size: 520px;
+    top: 100px;
+    right: 100%;
+}
