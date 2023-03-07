@@ -13,30 +13,21 @@
     <div class="container">
         <div class="spinBtn">Spin</div>
         <div class="wheel">
-            <div class="wheel-content" style="--i: 1; --clr: #000000;"><span>Amir</span></div>
-            <div class="wheel-content" style="--i: 2; --clr: #008000;"><span>Gulmira</span></div>
-            <div class="wheel-content" style="--i: 3; --clr: #c0c0c0;"><span>Sherzod</span></div>
-            <div class="wheel-content" style="--i: 4; --clr: #00f;"><span>Temur</span></div>
-            <div class="wheel-content" style="--i: 5; --clr: #000000;"><span>Amir</span></div>
-            <div class="wheel-content" style="--i: 6; --clr: #008000;"><span>Gulmira</span></div>
-            <div class="wheel-content" style="--i: 7; --clr: #c0c0c0;"><span>Sherzod</span></div>
-            <div class="wheel-content" style="--i: 8; --clr: #00f;"><span>Temur</span></div>
+            <div class="wheel-content" style="--i: 1; --clr: #6d13cd;"><span>100$</span></div>
+            <div class="wheel-content" style="--i: 2; --clr: #eac510;"><span>200$</span></div>
+            <div class="wheel-content" style="--i: 3; --clr: #c0c0c0;"><span>150$</span></div>
+            <div class="wheel-content" style="--i: 4; --clr: rgb(227, 16, 220);"><span>1000$</span></div>
+            <div class="wheel-content" style="--i: 5; --clr: #000000;"><span>730$</span></div>
+            <div class="wheel-content" style="--i: 6; --clr: #1cca1c;"><span>Big Car</span></div>
+            <div class="wheel-content" style="--i: 7; --clr: #9c2525;"><span>99999$</span></div>
+            <div class="wheel-content" style="--i: 8; --clr: rgb(32, 207, 149);"><span>Premium</span></div>
         </div>
     </div>
     
-    <div class="text" style="color: white;"><h1>Anjimaniya qilish (odamga qarab)</h1></div>
+    <div class="text" style="color: white;"><h1>Random spin wheel</h1></div>
 
-    <script>
-        let wheel = document.querySelector(".wheel")
-        let spinBtn = document.querySelector(".spinBtn")
-        let value = Math.ceil(Math.random() * 3600);
-        
-        spinBtn.onclick = function() {
-            wheel.style.transform = "rotate(" + value + 
-            "deg)";
-            value += Math.ceil(Math.random() * 3600);
-        }
 
-        </script>
+    <script src="./script.js"></script>
+
 </body>
 </html>
