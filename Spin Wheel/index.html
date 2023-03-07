@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>
+        Spin Wheel using CSS & Javascript | Lucky Spinning Wheel Game
+    </title>
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <div class="wheel-content" style="--i: 1; --clr: #000000;"><span>Amir</span></div>
+            <div class="wheel-content" style="--i: 2; --clr: #008000;"><span>Gulmira</span></div>
+            <div class="wheel-content" style="--i: 3; --clr: #c0c0c0;"><span>Sherzod</span></div>
+            <div class="wheel-content" style="--i: 4; --clr: #00f;"><span>Temur</span></div>
+            <div class="wheel-content" style="--i: 5; --clr: #000000;"><span>Amir</span></div>
+            <div class="wheel-content" style="--i: 6; --clr: #008000;"><span>Gulmira</span></div>
+            <div class="wheel-content" style="--i: 7; --clr: #c0c0c0;"><span>Sherzod</span></div>
+            <div class="wheel-content" style="--i: 8; --clr: #00f;"><span>Temur</span></div>
+        </div>
+    </div>
+    
+    <div class="text" style="color: white;"><h1>Anjimaniya qilish (odamga qarab)</h1></div>
+
+    <script>
+        let wheel = document.querySelector(".wheel")
+        let spinBtn = document.querySelector(".spinBtn")
+        let value = Math.ceil(Math.random() * 3600);
+        
+        spinBtn.onclick = function() {
+            wheel.style.transform = "rotate(" + value + 
+            "deg)";
+            value += Math.ceil(Math.random() * 3600);
+        }
+
+        </script>
+</body>
+</html>

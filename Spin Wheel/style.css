@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .spinBtn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 4px double rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 10px #000;
+    user-select: none;
+}
+.container .spinBtn::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    width: 20px;
+    height: 30px;
+    background: #fFF;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.container .wheel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow:  0 0 0 5px #333,
+    0 0 0 15px #fff,
+    0 0 0 18px #111;
+    transition: transform 5s ease-in-out;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 20px #fff);
+}
+.container .wheel .wheel-content {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 56% 0, 100% 100%, 0 56%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: progress;
+    color: white;
+}
+.container .wheel .wheel-content span {
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+.container .wheel .wheel-content span::after {
+    content: "";
+    position: absolute;
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.text {
+    position: absolute;
+    top: 60px;
+}
