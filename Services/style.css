@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.courses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.course {
+    border: 3px solid #6caddf;
+    padding: 15px;
+    margin: 10px;
+}
+.coursebox {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    margin: 25px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 10px double #6caddf;
+    overflow: hidden;
+    transition: 0.5s;
+    float: left;
+}
+.coursebox a {
+    z-index: 10;
+}
+.coursebox:hover {
+    border: 0px double #00000000;
+    /* filter: drop-shadow(0 0 20px #6caddf); */
+}
+.coursebox::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 190px;
+    background: linear-gradient(#ff1039, #d400d4);
+    opacity: 0;
+    animation: coursebox 2s linear infinite;
+    transition-delay: 0.4s;
+    transition: 0.3s;
+}
+.coursebox:hover::before {
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+.coursebox::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #6caddf;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0.1s;
+}
+.coursebox:hover::after {
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+@keyframes coursebox {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes beats {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.coursebox .icon {
+    position: relative;
+    color: red;
+    z-index: 10;
+    font-size: 3em;
+    transition: 1s;
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+.coursebox:hover .icon:first-child {
+    animation: rocket 1s ease-in-out both infinite;
+    transform: translateX(180px) translateY(-180px);
+}
+.coursebox .icon:last-child{
+    position: absolute;
+    width: 0;
+    height: 0;
+    scale: 0;
+    bottom: 10px;
+    left: 11px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coursebox:hover .icon:last-child {
+    animation: beats 1s ease-in-out infinite;
+    width: 100px;
+    height: 100px;
+    scale: 0.7;
+    transition-delay: 0.3s;
+}
+.courses .course .head-text {
+    background: #00000005;
+    border-bottom: 1px solid #999;
+    padding: 20px;
+    width: 100%;
+    height: 80px;
+}
+.courses .course .head-text .left-text {
+    float: left;
+}
+.courses .course .head-text .right-text {
+    float: right;
+    text-align: right;
+}
+.courses .course .head-text .right-text, .left-text {
+    width: 50%;
+    height: 100%;
+}
+.course-text {
+    width: 400px;
+    padding: 40px 10px;
+    font-size: 0.9em;
+    float: right;
+}
