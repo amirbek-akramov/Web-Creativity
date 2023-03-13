@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    height: 300vh;
+}
+
+/* Anime navbar */
+.navigation {
+    position: fixed;
+    height: 660px;
+    width: 70px;
+    margin: 30px 0;
+    overflow: hidden;
+    transition: 0.5s;
+    background: #2b343b;
+    box-shadow: 10px 0 0 #0b89e9;
+    border-left: 10px solid #2b343b;
+}
+.navigation:hover {
+    width: 250px;
+}
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+    /* top: 10%; */
+}
+.navigation ul .ABC img {
+    width: 30px;
+}
+.navigation ul .ABC {
+    bottom: -50%;
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+.navigation ul .ABC:hover {
+    filter: drop-shadow(0 0 3px gold);
+}
+.navigation ul .ABC:active {
+    filter: none;
+}
+.navigation:hover ul .ABC {
+    left: 30%;
+    bottom: -45%;
+    transform: scale(3);
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    transition: 0.3s;
+}
+.navigation ul li.active {
+    background: #0b89e9;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li.active a::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -50%;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #0b89e9;
+}
+.navigation ul li.active a::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: -50%;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #0b89e9;
+}
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    line-height: 70px;
+    height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+}
+.navigation ul li a .nav-title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+}
+/* /Navbar */
+
+/* Canvas styles */
+.offcanvas-body a .offcanvas-icon {
+    color: var(--clr);
+    font-size: 1.3em;
+    padding-right: 10px;
+    transition: 0.4s ease
+}
+
+.offcanvas-body a {
+    color: aliceblue;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Consolas";
+    transition: 0.4s ease;
+}
+.offcanvas-body a:hover {
+    color: #757575;
+    letter-spacing: 5px;
+}
+.offcanvas-body a:hover .offcanvas-icon {
+    transform: translateX(-10px) rotate(-15deg);
+}
+.offcanvas .header-social_text {
+    display: flex;
+    flex-direction: column;
+
+}
+.offcanvas .header-social_text::after {
+    content: "Ijtimoiy tarmoqlarda";
+    color: #bababa;
+    font-size: smaller;
+    font-weight: 300;
+}
