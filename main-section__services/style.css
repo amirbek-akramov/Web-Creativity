@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 300vh;
+}
+.service-section__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.service-section__container .service-section__card {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 20px;
+    background: linear-gradient(to left bottom, #3C37F1, #3F3BE1);
+    transition: 0.5s;
+}
+.service-section__container .service-section__card:hover {
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 5px 5px 5px 3px #d6d6d6;
+}
+.service-section__container .service-section__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #111;
+    border-right: 20px solid #111;
+    transition: 0.5s;
+}
+.service-section__container .service-section__card.active::before {
+    border-top: 20px solid #ddd;
+    border-right: 20px solid #ddd;
+    transition: 0.5s;
+}
+.service-section__container .service-section__card .service-section__icon img {
+    max-width: 90px;
+    padding: 10px;
+    user-select: none;
+}
+.service-section__container .service-section__card .service__section__more__Btn {
+    position: relative;
+    padding: 10px 15px;
+    background: #0000005a;
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-decoration: none;
+    user-select: none;
+    transition: 0.5s;   
+}
+.service-section__container .service-section__card .service__section__more__Btn::before {
+    content: "Batafsil...";
+    user-select: none;
+}
+
+.service-section__container .service-section__card .service-section__icon {
+    margin-bottom: 10px;
+}
+/* .service-section__container .service-section__card .service-section__content {
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.service-section__container .service-section__card.active .service-section__content {
+    height: auto; 
+}
+    */
+
+/* .service-section__container .service-section__card .service-section__content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #6A2DCF );
+    transition: 0.5s;
+}
+.service-section__container .service-section__card.active .service-section__content::before {
+    display: none;
+} */
+.service-section__container .service-section__card .service-section__content h3 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.service-section__container .service-section__card .service-section__content p {
+    font-weight: 300;
+    color: #ccc;
+}
