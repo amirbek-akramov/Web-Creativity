@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.cursor {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #1a438c20;
+    filter: drop-shadow(0 0 2px #1a438c);
+    border: 1px solid  #1a438c;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+.cursor2 {
+    width: 20px;
+    height:  20px;
+    border-radius: 50%;
+    background: #1a438c20;
+    filter: drop-shadow(0 0 2px #1a438c);
+    border: 1px solid  #1a438c;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+}
+.cursor3 {
+    width: 15px;
+    height:  15px;
+    border-radius: 50%;
+    background: #1a438c20;
+    filter: drop-shadow(0 0 2px #1a438c);
+    border: 1px solid  #1a438c;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}
+.cursor4 {
+    width: 10px;
+    height:  10px;
+    border-radius: 50%;
+    background: #1a438c20;
+    filter: drop-shadow(0 0 2px #1a438c);
+    border: 1px solid  #1a438c;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+.cursor5 {
+    width: 5px;
+    height:  5px;
+    border-radius: 50%;
+    background: #1a438c20;
+    filter: drop-shadow(0 0 2px #1a438c);
+    border: 1px solid  #1a438c;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
