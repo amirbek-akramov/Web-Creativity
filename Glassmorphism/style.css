@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Great Vibes', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to top right, pink, blue);
+    user-select: none;
+}
+
+.glass {
+    font-size: 6em;
+    padding: 180px 260px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+    filter: drop-shadow(0 0 5px #FFF);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.glass::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 
+    0 0 10px rgba(255, 255, 255, 0.1),
+    0 0 10px rgba(255, 255, 255, 0.1);
+    transform: rotate(35deg) translateY(600px);
+    transition: 0.7s ease-in-out;
+}
+
+.glass:hover:before {
+    transform: rotate(35deg) translateY(-600px);
+}
+
+.cube {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(89% 8%, 42% 14%, 18% 49%, 32% 71%, 63% 83%, 87% 72%, 93% 32%);
+    background: linear-gradient(to top right, limegreen, yellow);
+    border-radius: 10px;
+    left: 100px;
+    bottom: 30px;
+    animation: topbottom 2s ease-in-out infinite;
+}
+
+@keyframes topbottom {
+    from, to {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cube2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background: linear-gradient(to top right, coral, tomato);
+    right: 100px;
+    top: 30px;
+    animation: topbottom 3s ease-in-out infinite;
+}
